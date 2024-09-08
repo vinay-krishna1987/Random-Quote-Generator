@@ -32,7 +32,6 @@ function copyToClipboard() {
     });
 }
 
-// Attach event listeners
 if (newQuoteButton) {
     newQuoteButton.addEventListener("click", () => getQuote(apiUrl));
 }
@@ -41,5 +40,5 @@ if (copyButton) {
     copyButton.addEventListener("click", copyToClipboard);
 }
 
-// Load the initial quote
+
 getQuote(apiUrl);
