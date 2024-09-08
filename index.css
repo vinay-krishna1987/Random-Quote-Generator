@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Handjet;
+}
+
+body {
+   background: rgba(255, 169, 99, 0.603);
+}
+
+.quote-box {
+   background: white;
+   width: 90%; /* Adjust width for smaller screens */
+   max-width: 700px; /* Keep max width for larger screens */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 20px; /* Reduce padding for smaller screens */
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.251);
+}
+
+.quote-box h2 {
+   font-size: 30px; /* Adjust font size for smaller screens */
+   font-weight: bolder;
+   margin-bottom: 20px; /* Reduce margin for smaller screens */
+   position: relative;
+}
+
+.quote-box h2::after {
+   content: '';
+   width: 60px; /* Adjust width for smaller screens */
+   height: 2px;
+   border-radius: 3px;
+   background: rgb(255, 141, 55);
+   position: absolute;
+   bottom: -10px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+   font-size: 24px; /* Adjust font size for smaller screens */
+   min-height: 80px; /* Reduce min height for smaller screens */
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after {
+   content: '"';
+}
+
+.quote-box span {
+   display: block;
+   margin-top: 10px;
+   float: right;
+   position: relative;
+   font-size: 20px;
+   padding-left: 30px; /* Add space for the decorative line */
+}
+
+.quote-box span::before {
+   content: '';
+   width: 15px; /* Width of the line */
+   height: 2px;
+   background: rgb(255, 141, 55);
+   position: absolute;
+   top: 50%;
+   left: 0; /* Position the line just before the text */
+   transform: translateY(-50%); /* Center the line vertically */
+}
+
+
+.quote-box div {
+   width: 100%;
+   margin-top: 30px; /* Reduce margin for smaller screens */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.quote-box button {
+   background: rgb(255, 141, 55);
+   color: white;
+   font-size: 20px; /* Adjust font size for smaller screens */
+   font-weight: 500;
+   border-radius: 25px;
+   border: 1px solid rgb(255, 141, 55);
+   width: 140px; /* Adjust button width for smaller screens */
+   height: 45px; /* Adjust button height for smaller screens */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 5px;
+   cursor: pointer;
+}
+
+.quote-box button:nth-child(2) {
+   background: transparent;
+   color: rgb(255, 141, 55);
+   border-width: 2px;
+}
+
+#copy-message {
+   display: none;
+   margin-top: 10px;
+   color: green;
+   font-size: 14px; /* Adjust font size for smaller screens */
+   font-weight: bolder;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+   .quote-box {
+       width: 95%;
+       padding: 15px;
+   }
+
+   .quote-box h2 {
+       font-size: 24px;
+       margin-bottom: 10px;
+   }
+
+   .quote-box blockquote {
+       font-size: 20px;
+       min-height: 70px;
+   }
+
+   .quote-box span {
+       font-size: 16px;
+   }
+
+   .quote-box button {
+       font-size: 18px;
+       width: 120px;
+       height: 40px;
+   }
+
+   #copy-message {
+       font-size: 12px;
+   }
+}
